@@ -1,65 +1,13 @@
-<h1>One Piece CRUD</h1>
+<h1>One Piece - CRUD</h1>
 <hr />
 <div class="row">
   <!-- * Characters -->
   <div class="col-6">
-    <p class="h1">Characters</p>
-    <hr />
-
-    <ul class="list-group list-group-flush">
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <div class="character-info">
-          <p class="m-0">Monkey D Luffy</p>
-          <p class="text-secondary fs-6">Reward: 300$</p>
-        </div>
-        <button class="btn btn-danger">X</button>
-      </li>
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <div class="character-info">
-          <p class="m-0">Roronoa Zoro</p>
-          <p class="text-secondary fs-6">Reward: 160$</p>
-        </div>
-        <button class="btn btn-danger">X</button>
-      </li>
-      <li
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <div class="character-info">
-          <p class="m-0">Vinsmoke Sanji</p>
-          <p class="text-secondary fs-6">Reward: 75$</p>
-        </div>
-        <button class="btn btn-danger">X</button>
-      </li>
-    </ul>
+    <app-characters></app-characters>
   </div>
 
   <!-- * Form -->
   <div class="col-6">
-    <p class="h1">Add Character</p>
-    <hr />
-
-    <!-- * Name -->
-    <div class="mb-3">
-      <label class="form-label" for="name">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="nombre" />
-    </div>
-    <!-- * Reward -->
-    <div class="mb-3">
-      <label class="form-label" for="reward">Reward:</label>
-      <input
-        type="number"
-        class="form-control"
-        id="reward"
-        placeholder="reward"
-      />
-    </div>
-
-    <div class="">
-      <button type="submit" class="btn btn-primary w-100">Add Character</button>
-    </div>
+    <app-add-character></app-add-character>
   </div>
 </div>

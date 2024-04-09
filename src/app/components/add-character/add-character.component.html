@@ -1,17 +1,33 @@
 <p class="h1">Add Character</p>
 <hr />
 
-<!-- * Name -->
-<div class="mb-3">
-  <label class="form-label" for="name">Name:</label>
-  <input type="text" class="form-control" id="name" placeholder="nombre" />
-</div>
-<!-- * Reward -->
-<div class="mb-3">
-  <label class="form-label" for="reward">Reward:</label>
-  <input type="number" class="form-control" id="reward" placeholder="reward" />
-</div>
+<form (ngSubmit)="emitCharacter()">
+  <!-- * Name -->
+  <div class="mb-3">
+    <label class="form-label" for="name">Name:</label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="character.name"
+      class="form-control"
+      id="name"
+      placeholder="nombre"
+    />
+  </div>
+  <!-- * Reward -->
+  <div class="mb-3">
+    <label class="form-label" for="reward">Reward:</label>
+    <input
+      type="number"
+      name="reward"
+      [(ngModel)]="character.reward"
+      class="form-control"
+      id="reward"
+      placeholder="reward"
+    />
+  </div>
 
-<div class="">
-  <button type="submit" class="btn btn-primary w-100">Add Character</button>
-</div>
+  <div class="">
+    <button type="submit" class="btn btn-primary w-100">Add Character</button>
+  </div>
+</form>

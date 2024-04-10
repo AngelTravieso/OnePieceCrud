@@ -7,6 +7,6 @@
       <p class="m-0">{{ character.name }}</p>
       <p class="text-secondary fs-6">Reward: {{ character.reward }}$</p>
     </div>
-    <button class="btn btn-danger" (click)="(onDeleteCharacter)">X</button>
+    <button class="btn btn-danger" (click)="emitDeleteCharacter(character.id)">X</button>
   </li>
 </ul>

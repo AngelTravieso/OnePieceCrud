@@ -9,20 +9,7 @@ import { Character } from '../interfaces/character.interface';
 export class OnePieceService {
   constructor() {}
 
-  public characters: Character[] = [
-    {
-      name: 'Monkey D Luffy',
-      reward: 300,
-    },
-    {
-      name: 'Roronoa Zoro',
-      reward: 160,
-    },
-    {
-      name: 'Vinsmoke Sanji',
-      reward: 75,
-    },
-  ];
+  public characters: Character[] = [];
 
   public addCharacter(character: Character): void {
     const newCharacter: Character = {
@@ -34,6 +21,6 @@ export class OnePieceService {
   }
 
   public deleteCharacter(id: string): void {
-    this.characters.filter((character) => character.id !== id);
+    this.characters = this.characters.filter(character => character.id !== id);
   }
 }

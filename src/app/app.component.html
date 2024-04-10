@@ -1,13 +1,16 @@
-<h1>One Piece - CRUD</h1>
+<h1>{{title}}</h1>
 <hr />
 <div class="row">
   <!-- * Characters -->
   <div class="col-6">
-    <app-characters></app-characters>
+    <app-list-characters
+      [characters]="characters"
+      (onDeleteCharacter)="deleteCharacter($event)">
+    </app-list-characters>
   </div>
 
   <!-- * Form -->
   <div class="col-6">
-    <app-add-character></app-add-character>
+    <app-add-character (onNewCharacter)="addNewCharacter($event)"></app-add-character>
   </div>
 </div>

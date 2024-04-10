@@ -1,19 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 import { Character } from 'src/app/interfaces/character.interface';
-import { OnePieceService } from 'src/app/services/one-piece.service';
 
 @Component({
-  selector: 'app-characters',
+  selector: 'app-list-characters',
   templateUrl: './characters.component.html',
 })
 export class CharactersComponent {
-  constructor(private readonly onePieceService: OnePieceService) {}
 
-  get characters(): Character[] {
-    return [...this.onePieceService.characters];
-  }
+  @Input()
+  public characters: Character[] = [];
 
-  public onDeleteCharacter(id: string): void {
-    this.onePieceService.deleteCharacter(id);
+  @Output()
+  public onDeleteCharacter: EventEmitter<string> = new EventEmitter();
+
+  public emitDeleteCharacter(id?: string): void {
+
+    console.log(id)
+
+    if(!id) return;
+
+    this.onDeleteCharacter.emit(id);
   }
 }

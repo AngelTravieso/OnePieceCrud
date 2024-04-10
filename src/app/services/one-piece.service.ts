@@ -7,7 +7,6 @@ import { Character } from '../interfaces/character.interface';
   providedIn: 'root',
 })
 export class OnePieceService {
-  constructor() {}
 
   public characters: Character[] = [];
 

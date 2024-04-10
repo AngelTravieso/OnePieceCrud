@@ -8,7 +8,23 @@ import { Character } from '../interfaces/character.interface';
 })
 export class OnePieceService {
 
-  public characters: Character[] = [];
+  public characters: Character[] = [
+    {
+      id: uuid(),
+      name: 'Monkey D Luffy',
+      reward: 300,
+    },
+    {
+      id: uuid(),
+      name: 'Roronoa Zoro',
+      reward: 175,
+    },
+    {
+      id: uuid(),
+      name: 'Vinsmoke Sanji',
+      reward: 73,
+    },
+];
 
   public addCharacter(character: Character): void {
     const newCharacter: Character = {

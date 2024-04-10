@@ -1,13 +1,8 @@
 <p class="h1">Characters</p>
 <hr />
 
-<div class="d-flex flex-column align-content-center justify-content-center fs-1 text-secondary" *ngIf="characters.length === 0; else listOfCharacters">
-  <i class="fa-solid fa-magnifying-glass text-center mb-2"></i>
-  <p class="d-flex justify-content-center h5 text-secondary fst-italic">There are no characters</p>
-</div>
-
-<ng-template #listOfCharacters>
-  <ul class="list-group list-group-flush" *ngFor="let character of characters">
+@for(character of characters; track character.id){
+  <ul class="list-group list-group-flush">
     <li class="list-group-item list-group-item-action item d-flex justify-content-between align-items-center">
       <div class="character-info">
         <p class="m-0"><span class="fw-bold fst-italic">Name:</span> {{ character.name }}</p>
@@ -16,4 +11,10 @@
       <button class="btn btn-danger" (click)="emitDeleteCharacter(character.id)">X</button>
     </li>
   </ul>
-</ng-template>
+}
+@empty {
+  <div class="d-flex flex-column align-content-center justify-content-center fs-1 text-secondary">
+    <i class="fa-solid fa-magnifying-glass text-center mb-2"></i>
+    <p class="d-flex justify-content-center h5 text-secondary fst-italic">There are no characters</p>
+  </div>
+}

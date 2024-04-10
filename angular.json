@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "one-piece-crud:build:production"
+              "buildTarget": "one-piece-crud:build:production"
             },
             "development": {
-              "browserTarget": "one-piece-crud:build:development"
+              "buildTarget": "one-piece-crud:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "one-piece-crud:build"
+            "buildTarget": "one-piece-crud:build"
           }
         },
         "test": {

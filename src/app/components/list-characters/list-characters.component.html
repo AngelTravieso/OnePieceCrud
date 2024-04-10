@@ -9,7 +9,14 @@
           <p class="m-0"><span class="fw-bold fst-italic">Name:</span> {{ character.name }}</p>
           <p class="text-secondary fs-6"><span class="fw-bold fst-italic">Reward:</span> {{ character.reward }}$</p>
         </div>
-        <button class="btn btn-danger" (click)="emitDeleteCharacter(character.id)">X</button>
+        <button
+          class="btn btn-danger"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="Delete Character"
+          (click)="emitDeleteCharacter(character.id)">
+            X
+        </button>
       </li>
 }
 @empty {
